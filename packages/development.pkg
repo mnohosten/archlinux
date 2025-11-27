@@ -1,0 +1,82 @@
+# Development Packages
+# Programming languages, build tools, LSPs
+
+# Version Control
+git                     # Distributed version control
+git-delta               # Better diff output
+lazygit                 # TUI for git
+github-cli              # GitHub CLI (gh command)
+
+# Build Systems
+cmake                   # Cross-platform build system
+meson                   # Build system
+ninja                   # Small build system
+clang                   # C/C++ compiler
+llvm                    # Compiler infrastructure
+
+# Languages - Java
+jdk-openjdk             # OpenJDK (latest)
+maven                   # Java build tool
+gradle                  # Java build tool
+
+# Languages - JavaScript/Node (NVM handles Node.js)
+# Node.js installed via nvm in install script
+
+# Languages - Python
+python                  # Python interpreter
+python-pip              # Python package installer
+python-pipx             # Install Python apps in isolation
+python-poetry           # Python dependency management
+python-black            # Python code formatter
+
+# Languages - Go
+go                      # Go programming language
+gopls                   # Go language server
+
+# Languages - Rust
+rustup                  # Rust toolchain manager
+rust-analyzer           # Rust language server
+
+# Languages - PHP
+php                     # PHP language
+php-gd                  # PHP GD extension
+php-sqlite              # PHP SQLite extension
+composer                # PHP package manager
+
+# Languages - Lua
+lua                     # Lua interpreter
+luarocks                # Lua package manager
+
+# Language Servers
+bash-language-server    # Bash LSP
+lua-language-server     # Lua LSP
+pyright                 # Python LSP
+typescript-language-server  # TypeScript/JavaScript LSP
+yaml-language-server    # YAML LSP
+
+# Formatters & Linters
+eslint                  # JavaScript linter
+prettier                # Code formatter
+ruff                    # Fast Python linter
+shellcheck              # Shell script linter
+shfmt                   # Shell script formatter
+stylua                  # Lua formatter
+
+# Debugging
+gdb                     # GNU debugger
+valgrind                # Memory debugging tool
+strace                  # System call tracer
+ltrace                  # Library call tracer
+perf                    # Performance analysis
+
+# Containers & Infrastructure
+docker                  # Container runtime
+docker-buildx           # Docker build extensions
+docker-compose          # Multi-container orchestration
+terraform               # Infrastructure as code
+ansible                 # Configuration management
+
+# Kubernetes (optional - uncomment if needed)
+# kubectl                 # Kubernetes CLI
+# helm                    # Kubernetes package manager
+# k9s                     # Kubernetes TUI

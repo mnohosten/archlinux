@@ -1,0 +1,71 @@
+! Monokai Pro Color Scheme for X terminals
+
+! Font configuration - Cascadia Code (similar to Consolas)
+*.font: xft:Cascadia Code:size=11:antialias=true:hinting=true
+*.boldFont: xft:Cascadia Code:style=Bold:size=11:antialias=true:hinting=true
+*.faceName: Cascadia Code
+*.faceSize: 11
+
+! Emoji font fallback
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.hintstyle: hintfull
+
+! Special colors
+*.foreground:   #fcfcfa
+*.background:   #2d2a2e
+*.cursorColor:  #fcfcfa
+
+! Black
+*.color0:       #403e41
+*.color8:       #727072
+
+! Red
+*.color1:       #ff6188
+*.color9:       #ff6188
+
+! Green
+*.color2:       #a9dc76
+*.color10:      #a9dc76
+
+! Yellow
+*.color3:       #ffd866
+*.color11:      #ffd866
+
+! Blue
+*.color4:       #fc9867
+*.color12:      #fc9867
+
+! Magenta
+*.color5:       #ab9df2
+*.color13:      #ab9df2
+
+! Cyan
+*.color6:       #78dce8
+*.color14:      #78dce8
+
+! White
+*.color7:       #fcfcfa
+*.color15:      #fcfcfa
+
+! URxvt specific settings
+URxvt.scrollBar: false
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.internalBorder: 12
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.iso14755: false
+URxvt.urgentOnBell: true
+
+! XTerm specific settings
+XTerm*termName: xterm-256color
+XTerm*selectToClipboard: true
+XTerm*bellIsUrgent: true
+XTerm*internalBorder: 12
+XTerm*fullscreen: never
+XTerm.vt100.translations: #override \n\
+    Meta <Key>Return: none \n\
+    Shift <Key>Return: string("\033[13;2u")

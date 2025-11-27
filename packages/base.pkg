@@ -1,0 +1,14 @@
+# Base System Packages
+# Essential for a bootable Arch Linux system
+
+base                    # Minimal package set to define Arch installation
+base-devel              # Build tools (gcc, make, etc.)
+linux                   # Linux kernel
+linux-firmware          # Firmware files for common hardware
+intel-ucode             # Microcode updates for Intel CPUs
+efibootmgr              # EFI boot manager utility
+
+# System services
+acpid                   # Power management daemon
+openssh                 # Secure shell server and client
+zram-generator          # Compressed swap in RAM

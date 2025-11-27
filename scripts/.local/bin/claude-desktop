@@ -1,0 +1,3 @@
+#!/bin/bash
+# Claude Desktop Launcher Script
+/usr/bin/google-chrome-stable --app=https://claude.ai --class=Claude "$@" &

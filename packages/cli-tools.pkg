@@ -1,0 +1,60 @@
+# CLI Tools
+# Modern command-line utilities
+
+# Modern replacements
+bat                     # cat with syntax highlighting
+eza                     # ls replacement (formerly exa)
+fd                      # find replacement
+ripgrep                 # grep replacement (rg command)
+sd                      # sed replacement
+dust                    # du replacement
+duf                     # df replacement
+procs                   # ps replacement
+bottom                  # htop alternative (btm command)
+btop                    # Another system monitor
+htop                    # Interactive process viewer
+glances                 # System monitoring tool
+zoxide                  # cd with frecency (z command)
+
+# File Managers
+ranger                  # Terminal file manager
+lf                      # Terminal file manager (Go)
+nnn                     # Fast file manager
+mc                      # Midnight Commander
+
+# Shell & Terminal
+zsh                     # Z shell
+starship                # Cross-shell prompt
+tmux                    # Terminal multiplexer
+fzf                     # Fuzzy finder
+
+# Editors
+neovim                  # Modern vim
+vim                     # Vi IMproved
+nano                    # Simple text editor
+
+# Data Processing
+jq                      # JSON processor
+miller                  # CSV/JSON/tabular processor
+grex                    # Regex generator from examples
+
+# Utilities
+tree                    # Directory tree viewer
+ncdu                    # Disk usage analyzer
+tldr                    # Simplified man pages
+tokei                   # Code statistics
+hyperfine               # Benchmarking tool
+pandoc-cli              # Document converter
+lnav                    # Log file navigator
+rsync                   # File synchronization
+
+# System
+lsof                    # List open files
+iotop                   # I/O monitor
+sysstat                 # System statistics
+smartmontools           # HDD/SSD health monitoring
+
+# Backup
+borg                    # Backup tool
+rclone                  # Cloud storage sync
+restic                  # Backup program

@@ -1,0 +1,25 @@
+# Desktop Applications
+# GUI applications and terminals
+
+# Browsers
+firefox                 # Mozilla Firefox
+
+# Communication
+thunderbird             # Email client
+signal-desktop          # Encrypted messaging
+
+# Media
+kodi                    # Media center
+
+# Terminals
+alacritty               # GPU-accelerated terminal
+kitty                   # Modern terminal emulator
+
+# Screenshot
+maim                    # Screenshot tool
+slop                    # Region selection for maim
+
+# Database clients
+mariadb-clients         # MySQL/MariaDB client
+postgresql-libs         # PostgreSQL client libraries
+valkey                  # Redis-compatible key-value store

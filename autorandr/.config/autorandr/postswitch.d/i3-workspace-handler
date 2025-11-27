@@ -1,0 +1,11 @@
+#!/bin/bash
+# Global hook to handle i3 workspaces on display changes
+
+# Count active outputs (excluding xroot)
+ACTIVE_OUTPUTS=$(i3-msg -t get_outputs | jq '[.[] | select(.active == true and .name != "xroot-0")] | length')
+
+# If only one output is active (laptop-only mode), consolidate workspaces
+if [ "$ACTIVE_OUTPUTS" -eq 1 ]; then
+    sleep 1  # Give i3 a moment to process the display change
+    ~/.local/bin/i3-consolidate-workspaces.sh
+fi

@@ -1,0 +1,32 @@
+# Networking Packages
+# Network tools and diagnostics
+
+# Wireless
+iwd                     # Intel wireless daemon
+iw                      # Wireless configuration
+wpa_supplicant          # WPA authentication
+wireless_tools          # Legacy wireless utilities
+net-tools               # Classic network tools
+
+# DNS & HTTP
+bind                    # DNS utilities (dig, nslookup)
+dog                     # DNS client (dig alternative)
+httpie                  # HTTP client
+xh                      # HTTPie alternative in Rust
+wget                    # File downloader
+
+# Diagnostics
+nmap                    # Network scanner
+mtr                     # Traceroute + ping
+traceroute              # Route tracing
+tcpdump                 # Packet analyzer
+wireshark-cli           # Network protocol analyzer
+wireshark-qt            # Wireshark GUI
+iftop                   # Bandwidth monitor
+bandwhich               # Bandwidth utilization tool
+iperf3                  # Network performance testing
+
+# Utilities
+openbsd-netcat          # Netcat (nc command)
+socat                   # Socket utility
+nss-mdns                # mDNS/DNS-SD support

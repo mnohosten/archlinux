@@ -1,0 +1,37 @@
+# Desktop Environment Packages
+# i3 window manager and display components
+
+# Window Manager
+i3-wm                   # i3 tiling window manager
+i3blocks                # Status bar for i3
+i3lock                  # Screen locker
+i3status                # Status bar generator
+dmenu                   # Application launcher
+picom                   # Compositor for transparency and effects
+xss-lock                # Screen locker trigger on suspend
+feh                     # Image viewer and wallpaper setter
+
+# Display Manager
+lightdm                 # Display manager
+lightdm-gtk-greeter     # GTK greeter for LightDM
+
+# X.org essentials
+xorg-xinit              # X server initialization
+xorg-xrandr             # Display configuration
+xterm                   # Fallback terminal
+xdg-utils               # Desktop integration utilities
+xclip                   # Clipboard utility
+
+# Audio (PipeWire stack)
+pipewire                # Modern audio/video server
+pipewire-alsa           # ALSA compatibility
+pipewire-jack           # JACK compatibility
+pipewire-pulse          # PulseAudio compatibility
+wireplumber             # Session manager for PipeWire
+libpulse                # PulseAudio client libraries
+gst-plugin-pipewire     # GStreamer integration
+
+# Bluetooth
+bluez                   # Bluetooth protocol stack
+bluez-utils             # Bluetooth utilities
+blueman                 # Bluetooth GUI manager

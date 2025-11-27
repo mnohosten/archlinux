@@ -1,0 +1,14 @@
+# Font Packages
+# Typography for coding and UI
+
+# Monospace fonts for coding
+ttf-cascadia-code       # Microsoft Cascadia Code
+ttf-fira-code           # Mozilla Fira Code with ligatures
+ttf-hack                # Clean coding font
+ttf-jetbrains-mono      # JetBrains Mono
+ttf-meslo-nerd          # Meslo with Nerd Font icons
+
+# System fonts
+ttf-dejavu              # DejaVu font family
+ttf-liberation          # Liberation fonts (MS metric-compatible)
+noto-fonts-emoji        # Google emoji font

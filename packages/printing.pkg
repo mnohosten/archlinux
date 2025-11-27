@@ -1,0 +1,24 @@
+# Printing Packages
+# CUPS printing subsystem
+
+# CUPS core
+cups                    # Common Unix Printing System
+cups-browsed            # Printer discovery
+cups-pdf                # Print to PDF
+
+# Drivers & PPDs
+foomatic-db             # Printer database
+foomatic-db-engine      # Foomatic engine
+foomatic-db-gutenprint-ppds   # Gutenprint PPDs
+foomatic-db-nonfree-ppds      # Non-free PPDs
+foomatic-db-ppds        # Foomatic PPDs
+gutenprint              # Quality printer drivers
+hplip                   # HP printer support
+
+# Scanning
+sane                    # Scanner access
+sane-airscan            # Driverless scanning
+
+# GUI
+simple-scan             # Simple scanning application
+system-config-printer   # Printer configuration tool

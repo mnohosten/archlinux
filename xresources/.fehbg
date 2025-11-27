@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale '/home/krizos/Pictures/Wallpapers/blade_runner_03.jpg' 

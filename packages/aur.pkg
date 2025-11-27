@@ -1,0 +1,14 @@
+# AUR Packages
+# Arch User Repository packages (installed via yay)
+
+# Applications
+1password               # Password manager
+google-chrome           # Google Chrome browser
+slack-desktop           # Slack client
+
+# Databases & Messaging
+mongodb-bin             # MongoDB binary release
+nats-server-bin         # NATS messaging server
+
+# System
+yay                     # AUR helper (bootstrap this first)

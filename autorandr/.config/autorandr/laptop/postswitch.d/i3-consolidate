@@ -1,0 +1,4 @@
+#!/bin/bash
+# Consolidate i3 workspaces when switching to laptop-only mode
+sleep 1  # Give i3 a moment to process the display change
+~/.local/bin/i3-consolidate-workspaces.sh

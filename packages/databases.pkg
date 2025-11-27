@@ -1,0 +1,15 @@
+# Database Packages
+# Database servers and clients
+
+# MariaDB (MySQL compatible)
+mariadb                 # MariaDB database server
+mariadb-clients         # MariaDB client tools
+
+# PostgreSQL
+postgresql              # PostgreSQL database server
+postgresql-libs         # PostgreSQL client libraries
+
+# Redis-compatible
+valkey                  # Redis-compatible key-value store (community fork)
+
+# Note: MongoDB and NATS are in AUR (see aur.pkg)

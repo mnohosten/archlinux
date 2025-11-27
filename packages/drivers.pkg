@@ -1,0 +1,16 @@
+# GPU Driver Packages
+# Graphics drivers for Intel, AMD, NVIDIA
+
+# Intel GPU
+intel-media-driver      # Intel VAAPI driver (newer hardware)
+libva-intel-driver      # Intel VAAPI driver (older hardware)
+vulkan-intel            # Intel Vulkan driver
+
+# AMD GPU
+vulkan-radeon           # AMD Vulkan driver
+xf86-video-amdgpu       # AMD DDX driver
+xf86-video-ati          # ATI DDX driver (older AMD)
+
+# NVIDIA (open-source)
+vulkan-nouveau          # Nouveau Vulkan driver
+xf86-video-nouveau      # Nouveau DDX driver

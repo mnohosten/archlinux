@@ -1,0 +1,11 @@
+[Unit]
+Description=Autorandr execution hook
+After=graphical.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/autorandr --change --default laptop
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=default.target

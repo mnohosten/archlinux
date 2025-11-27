@@ -1,0 +1,20 @@
+#!/bin/bash
+# Screenshot script for area selection
+# Saves to ~/Pictures/Screenshots and copies to clipboard
+
+# Create filename with timestamp
+SCREENSHOT_DIR="/home/krizos/Pictures/Screenshots"
+FILENAME="$SCREENSHOT_DIR/screenshot-$(date +%Y%m%d-%H%M%S).png"
+
+# Take screenshot of selected area
+maim -s "$FILENAME"
+
+# Check if screenshot was taken successfully
+if [ $? -eq 0 ] && [ -f "$FILENAME" ]; then
+    # Copy to clipboard
+    xclip -selection clipboard -t image/png -i "$FILENAME"
+    echo "Screenshot saved to $FILENAME and copied to clipboard"
+else
+    echo "Screenshot cancelled or failed"
+    exit 1
+fi
