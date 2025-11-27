@@ -24,6 +24,16 @@ readonly NC='\033[0m'
 # Stow packages to install
 STOW_PACKAGES=(shell i3 i3status kitty picom autorandr btop xresources git scripts systemd)
 
+# Global for sudo keepalive cleanup
+SUDO_KEEPALIVE_PID=""
+
+cleanup() {
+    if [[ -n "$SUDO_KEEPALIVE_PID" ]] && kill -0 "$SUDO_KEEPALIVE_PID" 2>/dev/null; then
+        kill "$SUDO_KEEPALIVE_PID" 2>/dev/null || true
+    fi
+}
+trap cleanup EXIT
+
 # ============================================================================
 # LOGGING FUNCTIONS
 # ============================================================================
@@ -80,10 +90,23 @@ preflight_checks() {
 
     # Test sudo access
     log_info "Requesting sudo access (you may be prompted for password)..."
-    if ! sudo -v; then
-        log_error "Unable to obtain sudo privileges."
-        exit 1
+    if [[ -t 0 ]]; then
+        # Interactive mode - normal sudo
+        if ! sudo -v; then
+            log_error "Unable to obtain sudo privileges."
+            exit 1
+        fi
+    else
+        # Non-interactive mode - read password from stdin
+        if ! sudo -S -v 2>/dev/null; then
+            log_error "Unable to obtain sudo privileges. For non-interactive mode, pipe password: echo 'pass' | ./install.sh"
+            exit 1
+        fi
     fi
+
+    # Keep sudo alive in background
+    (while true; do sudo -n true; sleep 50; done) &
+    SUDO_KEEPALIVE_PID=$!
 
     # Check for git
     if ! command -v git &> /dev/null; then
@@ -486,20 +509,24 @@ setup_nvm_node() {
         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
     fi
 
-    # Source NVM
+    # Source NVM (disable strict mode temporarily as NVM uses unset variables)
     export NVM_DIR="$nvm_dir"
+    set +u
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    set -u
 
     if ! command -v nvm &>/dev/null; then
         log_warn "NVM not available in current session. Will be available after restart."
         return 0
     fi
 
-    # Install Node.js LTS
+    # Install Node.js LTS (disable strict mode for NVM commands)
     log_info "Installing Node.js LTS..."
+    set +u
     nvm install --lts
     nvm use --lts
     nvm alias default 'lts/*'
+    set -u
 
     log_success "Node.js LTS installed: $(node --version)"
 }
@@ -507,9 +534,11 @@ setup_nvm_node() {
 install_claude_code() {
     log_info "Installing Claude Code..."
 
-    # Source NVM if available
+    # Source NVM if available (disable strict mode temporarily)
     export NVM_DIR="${HOME}/.nvm"
+    set +u
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    set -u
 
     if ! command -v npm &>/dev/null; then
         log_warn "npm not available. Claude Code installation skipped."

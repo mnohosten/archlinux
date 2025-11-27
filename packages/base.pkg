@@ -12,3 +12,6 @@ efibootmgr              # EFI boot manager utility
 acpid                   # Power management daemon
 openssh                 # Secure shell server and client
 zram-generator          # Compressed swap in RAM
+
+# Dotfiles management
+stow                    # GNU Stow for symlink management
